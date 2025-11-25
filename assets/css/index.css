@@ -1,0 +1,1184 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+            background: #F8F8F8; /* Blanc Nacré */
+            color: #333333; /* Texte standard gris foncé */
+            overflow-x: hidden;
+        }
+        
+        /* Variables de couleurs avec nouvelle palette */
+        :root {
+            --gold-luxe: #D4AF37; /* Or Luxueux */
+            --gold-dark: #C19B2A; /* Or plus foncé pour survol */
+            --blue-marine: #1E2A47; /* Bleu Marine */
+            --white-pearl: #F8F8F8; /* Blanc Nacré */
+            --silver-gray: #E8E8E8; /* Gris Argenté */
+            --burgundy: #722F37; /* Bordeaux Royal */
+            --sapphire: #0F4C5C; /* Vert Saphir */
+            --cream: #F5F1E6; /* Beige Crème */
+            --dark-text: #333333; /* Texte standard */
+        }
+        
+        /* Hero Section avec vidéo de fond */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("/assets/img/photo_2025-11-18_10-19-52.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            background-color: rgba(30, 42, 71, 0.7); /* Overlay Bleu Marine à 70% */
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: var(--white-pearl); /* Texte sur fond sombre */
+            max-width: 900px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: heroContentFadeIn 1.2s ease forwards 0.5s;
+        }
+        
+        @keyframes heroContentFadeIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            font-family: 'Cormorant Garamond', serif;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gold-luxe); /* Accent Or Luxueux */
+            animation: titleUnderline 1.5s ease forwards 1.5s;
+        }
+        
+        @keyframes titleUnderline {
+            to {
+                width: 200px;
+            }
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+            animation: subtitleFadeIn 1s ease forwards 1s;
+        }
+        
+        @keyframes subtitleFadeIn {
+            to {
+                opacity: 0.95;
+            }
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            background: rgba(30, 42, 71, 0.1); /* Bleu Marine transparent */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(-100%);
+            animation: navbarSlideDown 0.8s ease forwards 0.2s;
+        }
+        
+        @keyframes navbarSlideDown {
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        .navbar.scrolled {
+            background: rgba(248, 248, 248, 0.95); /* Blanc Nacré */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+        
+        .navbar.scrolled a {
+            color: var(--blue-marine); /* Texte Bleu Marine */
+        }
+        
+        .navbar.scrolled .logo-text {
+            color: var(--blue-marine); /* Texte Bleu Marine */
+        }
+        
+        /* Logo avec texte à côté */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo img {
+            height: 50px;
+            border-radius: 15px;
+            display: block;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white-pearl); /* Texte sur fond sombre */
+            letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--white-pearl); /* Texte sur fond sombre */
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold-luxe); /* Accent Or Luxueux */
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-luxe); /* Accent Or Luxueux */
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: transparent;
+            border: 1px solid var(--white-pearl);
+            color: var(--white-pearl);
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .nav-cta:hover {
+            background: var(--white-pearl);
+            color: var(--blue-marine); /* Texte Bleu Marine */
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Bouton principal */
+        .cta-button {
+            background: var(--gold-luxe); /* Fond Or Luxueux */
+            color: var(--blue-marine); /* Texte Bleu Marine */
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: buttonFadeIn 1s ease forwards 1.2s;
+        }
+        
+        @keyframes buttonFadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .cta-button:hover {
+            background: var(--gold-dark); /* Or plus foncé au survol */
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        /* Sections générales */
+        .section {
+            padding: 5rem 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--blue-marine); /* Titres principaux Bleu Marine */
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gold-luxe); /* Accent Or Luxueux */
+            transition: width 0.8s ease 0.5s;
+        }
+        
+        .section.visible .section-title::after {
+            width: 100%;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--dark-text); /* Texte standard */
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease 0.3s;
+        }
+        
+        .section.visible .section-subtitle {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Cartes de services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: var(--white-pearl); /* Fond Blanc Nacré */
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            text-align: center;
+            border: 1px solid var(--silver-gray); /* Bordure Gris Argenté */
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .service-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(212, 175, 55, 0.1); /* Or Luxueux avec transparence */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--gold-luxe); /* Icônes Or Luxueux */
+            font-size: 1.8rem;
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            background: var(--gold-luxe); /* Fond Or Luxueux */
+            color: var(--white-pearl); /* Icônes blanches */
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--blue-marine); /* Titres Bleu Marine */
+        }
+        
+        .service-description {
+            color: var(--dark-text); /* Texte standard */
+            line-height: 1.6;
+        }
+        
+        /* Section Philosophie */
+        .philosophy-section {
+            background: var(--silver-gray); /* Section secondaire Gris Argenté */
+        }
+        
+        .philosophy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+        
+        .philosophy-section.visible .philosophy-image {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .philosophy-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .philosophy-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .philosophy-text {
+            padding-right: 1rem;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease 0.3s;
+        }
+        
+        .philosophy-section.visible .philosophy-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .philosophy-text h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--blue-marine); /* Titres Bleu Marine */
+        }
+        
+        .philosophy-text p {
+            color: var(--dark-text); /* Texte standard */
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .text-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--gold-luxe); /* Liens Or Luxueux */
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .text-link:hover {
+            color: var(--burgundy); /* Liens survolés Bordeaux Royal */
+            gap: 0.5rem;
+        }
+        
+        /* Section WELOVE EYA */
+        .welove-section {
+            background: 
+                linear-gradient(135deg, rgba(212, 175, 55, 0.9) 0%, rgba(114, 47, 55, 0.85) 100%), /* Dégradé Or Luxueux vers Bordeaux */
+                url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            color: var(--white-pearl); /* Texte sur fond sombre */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .welove-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            animation: backgroundMove 20s linear infinite;
+        }
+        
+        @keyframes backgroundMove {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-100px, -100px);
+            }
+        }
+        
+        .welove-section .section-title,
+        .welove-section .section-subtitle {
+            color: var(--white-pearl); /* Texte sur fond sombre */
+            position: relative;
+            z-index: 1;
+        }
+        
+        .welove-section .section-subtitle {
+            opacity: 0.9;
+        }
+        
+        .welove-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .welove-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .welove-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .welove-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .welove-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--white-pearl); /* Icônes blanches */
+            font-size: 1.5rem;
+            transition: all 0.4s ease;
+        }
+        
+        .welove-card:hover .welove-icon {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1) rotate(10deg);
+        }
+        
+        .welove-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .welove-description {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .welove-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stat {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .stat.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .stat-number::after {
+            content: '+';
+            position: absolute;
+            top: 0;
+            right: -15px;
+            font-size: 1.5rem;
+        }
+        
+        .stat:last-child .stat-number::after {
+            content: '';
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Section Témoignages */
+        .testimonials-section {
+            background: var(--silver-gray); /* Section secondaire Gris Argenté */
+        }
+        
+        .testimonial-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+        
+        .testimonials-section.visible .testimonial-image {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .testimonial-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .testimonial-text {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease 0.3s;
+        }
+        
+        .testimonials-section.visible .testimonial-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .testimonial-text h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--blue-marine); /* Titres Bleu Marine */
+        }
+        
+        .testimonial-text p {
+            color: var(--dark-text); /* Texte standard */
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .testimonial-text p::before,
+        .testimonial-text p::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--gold-luxe); /* Accent Or Luxueux */
+            position: absolute;
+        }
+        
+        .testimonial-text p::before {
+            top: -10px;
+            left: -20px;
+        }
+        
+        .testimonial-text p::after {
+            bottom: -20px;
+            right: -20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--blue-marine); /* Titres Bleu Marine */
+        }
+        
+        /* Section Contact */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+        
+        .section.visible .contact-image {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .contact-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .contact-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .contact-text {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease 0.3s;
+        }
+        
+        .section.visible .contact-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .contact-text h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--blue-marine); /* Titres Bleu Marine */
+        }
+        
+        .contact-text p {
+            color: var(--dark-text); /* Texte standard */
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--blue-marine); /* En-tête/Pied de page Bleu Marine */
+            color: var(--white-pearl); /* Texte sur fond sombre */
+            padding: 4rem 2rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: footerBackgroundMove 30s linear infinite;
+        }
+        
+        @keyframes footerBackgroundMove {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-100px, -100px);
+            }
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-column h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--gold-luxe); /* Accent Or Luxueux */
+            transition: width 0.5s ease;
+        }
+        
+        .footer-column:hover h4::after {
+            width: 60px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .footer-logo .logo-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        
+        .footer-logo .logo-text {
+            font-size: 1.3rem;
+            color: var(--white-pearl); /* Texte sur fond sombre */
+        }
+        
+        .footer-description {
+            opacity: 0.8;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white-pearl); /* Icônes blanches */
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--gold-luxe); /* Fond Or Luxueux */
+            transform: translateY(-3px) scale(1.1);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-links li:hover {
+            transform: translateX(5px);
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white-pearl); /* Texte sur fond sombre */
+        }
+        
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-contact li:hover {
+            transform: translateX(5px);
+        }
+        
+        .footer-contact .icon {
+            margin-top: 2px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Indicateur de défilement */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white-pearl); /* Texte sur fond sombre */
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 2;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-5px) translateX(-50%);
+            }
+        }
+        
+        /* Particules flottantes */
+        .floating-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .philosophy-content,
+            .testimonial-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .welove-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .welove-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            /* Ajustement du logo en mobile */
+            .logo-text {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Menu mobile */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white-pearl); /* Texte sur fond sombre */
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background: var(--white-pearl); /* Fond Blanc Nacré */
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transition: right 0.4s ease;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .mobile-menu.open {
+            right: 0;
+        }
+        
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--silver-gray); /* Séparateur Gris Argenté */
+        }
+        
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--blue-marine); /* Titres Bleu Marine */
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu-close:hover {
+            transform: scale(1.1);
+        }
+        
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .mobile-nav-links a {
+            color: var(--blue-marine); /* Titres Bleu Marine */
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--silver-gray); /* Séparateur Gris Argenté */
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav-links a:hover {
+            color: var(--gold-luxe); /* Accent Or Luxueux */
+            padding-left: 10px;
+        }
+        
+        .mobile-cta {
+            margin-top: 2rem;
+            background: var(--gold-luxe); /* Fond Or Luxueux */
+            color: var(--blue-marine); /* Texte Bleu Marine */
+            border: none;
+            padding: 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-cta:hover {
+            background: var(--gold-dark); /* Or plus foncé au survol */
+            transform: translateY(-2px);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }

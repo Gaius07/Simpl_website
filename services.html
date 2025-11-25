@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPL' - Services de Conciergerie d'Excellence au Bénin</title>
+    <meta name="description" content="SIMPL' - Conciergerie d'excellence au Bénin. Services premium de voyage, événements et expériences sur mesure.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/services.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body class="bg-white-pearl">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="/assets/img/Sans écriture.png" alt="Logo SIMPL' - Services de conciergerie d'excellence">    
+            <span class="logo-text">SIMPL'</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Nos Services</a>
+            <a href="histoire.html">Notre Histoire</a>
+            <a href="welov.html">Événements</a>
+            <a href="contact.html" class="nav-cta">Nous Contacter</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </nav>
+    
+    <!-- Menu mobile -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="/assets/img/Sans écriture.png" alt="Logo SIMPL'" style="height: 40px; border-radius: 10px;">
+                <span class="logo-text">SIMPL'</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        
+        <div class="mobile-nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Nos Services</a>
+            <a href="histoire.html">Notre Histoire</a>
+            <a href="welov.html">Événements</a>
+            <a href="contact.html" class="mobile-cta">Nous Contacter</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/30 z-10"></div>
+            <div class="absolute inset-0 hero-gradient z-20"></div>
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        
+        <div class="relative z-30 container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <div class="inline-flex items-center bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-gold-luxury/30">
+                    <span class="material-icons gold-text mr-2 text-sm">auto_awesome</span>
+                    <span class="text-sm font-medium text-gold-pale">Services d'Excellence - Édition Prestige</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+                    <span class="gold-text">L'Art de l'Exceptionnel</span><br>
+                    <span class="text-white-pearl">Réinventé pour Vous</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gold-pale mb-10 max-w-3xl mx-auto leading-relaxed">
+                    SIMPL' : où chaque détail devient une expérience, chaque moment une mémoire précieuse. 
+                    Découvrez l'étendue de nos services de conciergerie premium.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+                    <a href="#services-section" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-8 py-4 rounded-full font-semibold transition-all duration-300 border-glow shine-effect flex items-center justify-center group">
+                        <span class="mr-2">Découvrir nos services</span>
+                        <span class="material-icons transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                    
+                    <button class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-8 py-4 rounded-full font-semibold transition-all duration-300 border-glow shine-effect flex items-center justify-center group">
+                        <span class="flex items-center justify-center">
+                            <span class="material-icons mr-2">play_circle</span>
+                            Voir notre film
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 animate-bounce">
+            <span class="material-icons gold-text">expand_more</span>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 rounded-full bg-gold-luxury/10 floating"></div>
+        <div class="absolute top-1/3 right-10 w-16 h-16 rounded-full bg-gold-luxury/20 floating" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-12 h-12 rounded-full bg-gold-luxury/30 floating" style="animation-delay: 4s;"></div>
+    </section>
+
+    <!-- Section Introduction -->
+    <section class="py-20 bg-silver-gray relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 fade-in-element blue-text">
+                    <span class="gold-text">L'Excellence</span> sur Mesure
+                </h2>
+                <p class="text-xl text-blue-marine mb-10 leading-relaxed fade-in-element">
+                    Chez SIMPL', nous ne créons pas simplement des voyages ou des événements. 
+                    Nous concevons des expériences immersives qui transcendent l'ordinaire et 
+                    transforment vos aspirations en réalités exceptionnelles.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                    <div class="bg-white-pearl rounded-2xl p-6 border border-silver-gray card-hover fade-in-element shadow-lg">
+                        <div class="w-16 h-16 bg-gold-luxury rounded-xl flex items-center justify-center mb-4 mx-auto">
+                            <span class="material-icons text-blue-marine text-2xl">star</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-marine mb-2">Exclusivité</h3>
+                        <p class="text-blue-light">Accès à des expériences et lieux inaccessibles au grand public</p>
+                    </div>
+                    
+                    <div class="bg-white-pearl rounded-2xl p-6 border border-silver-gray card-hover fade-in-element shadow-lg">
+                        <div class="w-16 h-16 bg-gold-luxury rounded-xl flex items-center justify-center mb-4 mx-auto">
+                            <span class="material-icons text-blue-marine text-2xl">design_services</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-marine mb-2">Personnalisation</h3>
+                        <p class="text-blue-light">Chaque détail est conçu spécifiquement selon vos désirs</p>
+                    </div>
+                    
+                    <div class="bg-white-pearl rounded-2xl p-6 border border-silver-gray card-hover fade-in-element shadow-lg">
+                        <div class="w-16 h-16 bg-gold-luxury rounded-xl flex items-center justify-center mb-4 mx-auto">
+                            <span class="material-icons text-blue-marine text-2xl">security</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-marine mb-2">Sérénité</h3>
+                        <p class="text-blue-light">Une gestion impeccable pour une expérience sans souci</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section Services Principaux -->
+    <section class="py-20 services-bg relative overflow-hidden" id="services-section">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 fade-in-element text-white-pearl">
+                    Nos <span class="gold-text">Domaines d'Excellence</span>
+                </h2>
+                <p class="text-xl text-gold-pale max-w-3xl mx-auto fade-in-element">
+                    De la conception de voyages sur mesure à l'organisation d'événements exclusifs, 
+                    découvrez comment nous transformons vos aspirations en réalités exceptionnelles.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 services-container">
+                <!-- Service 1 -->
+                <div class="bg-white-pearl rounded-2xl p-8 service-card border border-silver-gray card-hover fade-in-element shadow-lg">
+                    <div class="w-20 h-20 bg-gold-luxury rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+                        <span class="material-icons text-blue-marine text-3xl">support_agent</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-marine mb-4 text-center">Conception sur Mesure</h3>
+                    <p class="text-blue-light mb-6 text-center">
+                        Nous transformons vos rêves en itinéraires tangibles, créant des expériences uniques conçues exclusivement pour vous.
+                    </p>
+                    <ul class="space-y-3 text-blue-light mb-8">
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Consultation personnalisée
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Itinéraires sur mesure
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Planification d'activités
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/+22991464297" class="w-full bg-gold-luxury hover:bg-gold-dark text-blue-marine font-semibold py-3 rounded-xl transition-all duration-300 group shadow-md flex items-center justify-center">
+                        <span class="flex items-center justify-center">
+                            En savoir plus
+                            <span class="material-icons ml-2 text-sm transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white-pearl rounded-2xl p-8 service-card border border-silver-gray card-hover fade-in-element shadow-lg">
+                    <div class="w-20 h-20 bg-gold-luxury rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+                        <span class="material-icons text-blue-marine text-3xl">vpn_key</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-marine mb-4 text-center">Accès Exclusifs</h3>
+                    <p class="text-blue-light mb-6 text-center">
+                        Votre passe-partout pour des moments que l'argent ne peut habituellement pas acheter.
+                    </p>
+                    <ul class="space-y-3 text-blue-light mb-8">
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Accès VIP événements
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Rencontres privées
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Visites privatisées
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/+22991464297" class="w-full bg-gold-luxury hover:bg-gold-dark text-blue-marine font-semibold py-3 rounded-xl transition-all duration-300 group shadow-md flex items-center justify-center">
+                        <span class="flex items-center justify-center">
+                            En savoir plus
+                            <span class="material-icons ml-2 text-sm transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white-pearl rounded-2xl p-8 service-card border border-silver-gray card-hover fade-in-element shadow-lg">
+                    <div class="w-20 h-20 bg-gold-luxury rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+                        <span class="material-icons text-blue-marine text-3xl">concierge</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-marine mb-4 text-center">Conciergerie 360°</h3>
+                    <p class="text-blue-light mb-6 text-center">
+                        Votre sérénité, notre priorité. Nous anticipons vos besoins et gérons l'imprévu avec discrétion et efficacité.
+                    </p>
+                    <ul class="space-y-3 text-blue-light mb-8">
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Concierge dédié 24/7
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Transferts privés
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Gestion des imprévus
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/+22991464297" class="w-full bg-gold-luxury hover:bg-gold-dark text-blue-marine font-semibold py-3 rounded-xl transition-all duration-300 group shadow-md flex items-center justify-center">
+                        <span class="flex items-center justify-center">
+                            En savoir plus
+                            <span class="material-icons ml-2 text-sm transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white-pearl rounded-2xl p-8 service-card border border-silver-gray card-hover fade-in-element shadow-lg">
+                    <div class="w-20 h-20 bg-gold-luxury rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+                        <span class="material-icons text-blue-marine text-3xl">celebration</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-marine mb-4 text-center">Événements sur Mesure</h3>
+                    <p class="text-blue-light mb-6 text-center">
+                        Architectes de vos événements les plus précieux, garantissant une exécution parfaite et des souvenirs impérissables.
+                    </p>
+                    <ul class="space-y-3 text-blue-light mb-8">
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Mariages & célébrations
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Événements d'entreprise
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons gold-text mr-3 text-sm">check_circle</span>
+                            Soirées & galas
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/+22991464297" class="w-full bg-gold-luxury hover:bg-gold-dark text-blue-marine font-semibold py-3 rounded-xl transition-all duration-300 group shadow-md flex items-center justify-center">
+                        <span class="flex items-center justify-center">
+                            En savoir plus
+                            <span class="material-icons ml-2 text-sm transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section Détail Services -->
+    <section class="py-20 bg-silver-gray relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Service 1 - Conception sur Mesure -->
+            <div class="mb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1 fade-in-element">
+                        <div class="bg-gold-luxury rounded-3xl p-1 inline-block mb-6">
+                            <span class="text-sm font-bold text-blue-marine tracking-widest uppercase px-4 py-2">Service Signature</span>
+                        </div>
+                        <h2 class="text-4xl font-black mb-6 blue-text">
+                            Conception sur Mesure : <span class="gold-text">L'Art de Dessiner Votre Aventure</span>
+                        </h2>
+                        <p class="text-xl text-blue-light mb-8 leading-relaxed">
+                            Nous transformons vos rêves en itinéraires tangibles. Chaque voyage est une toile blanche que nous peignons avec des expériences uniques, conçues exclusivement pour vous.
+                        </p>
+                        
+                        <div class="space-y-6 mb-10">
+                            <div class="flex items-start bg-white-pearl rounded-2xl p-5 border border-silver-gray shadow-md">
+                                <div class="w-14 h-14 bg-gold-luxury rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg">
+                                    <span class="material-icons text-blue-marine">support_agent</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-marine mb-2">Consultation Personnalisée</h3>
+                                    <p class="text-blue-light">Écoute attentive de vos désirs et aspirations pour créer l'expérience parfaite.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white-pearl rounded-2xl p-5 border border-silver-gray shadow-md">
+                                <div class="w-14 h-14 bg-gold-luxury rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg">
+                                    <span class="material-icons text-blue-marine">map</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-marine mb-2">Itinéraires sur Mesure</h3>
+                                    <p class="text-blue-light">Création de parcours uniques qui reflètent vos intérêts et préférences.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white-pearl rounded-2xl p-5 border border-silver-gray shadow-md">
+                                <div class="w-14 h-14 bg-gold-luxury rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg">
+                                    <span class="material-icons text-blue-marine">edit_calendar</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-marine mb-2">Planification d'Activités</h3>
+                                    <p class="text-blue-light">Réservations exclusives et fluides d'expériences uniques et mémorables.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-8 py-4 rounded-full font-semibold transition-all duration-300 border-glow shine-effect group inline-flex items-center">
+                            <span class="flex items-center">
+                                Démarrer votre projet
+                                <span class="material-icons ml-2 transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <div class="order-1 lg:order-2 fade-in-element">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-gold-luxury rounded-3xl opacity-20 blur-xl"></div>
+                            <div class="relative bg-white-pearl rounded-2xl overflow-hidden border border-silver-gray shadow-lg">
+                                <img src="/assets/img/jet ski.jpg" 
+                                     alt="Deux personnes collaborant sur un plan de voyage" 
+                                     class="w-full h-96 object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 2 - Accès Exclusifs -->
+            <div class="mb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-1 lg:order-1 fade-in-element">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-gold-luxury rounded-3xl opacity-20 blur-xl"></div>
+                            <div class="relative bg-white-pearl rounded-2xl overflow-hidden border border-silver-gray shadow-lg">
+                                <img style="height: 100%;" src="/assets/img/from benin.jpg" 
+                                     alt="Cadre d'événement exclusif et luxueux avec décoration de table élégante" 
+                                     class="w-full h-96 object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-2 lg:order-2 fade-in-element">
+                        <div class="bg-gold-luxury rounded-3xl p-1 inline-block mb-6">
+                            <span class="text-sm font-bold text-blue-marine tracking-widest uppercase px-4 py-2">Accès Privilégié</span>
+                        </div>
+                        <h2 class="text-4xl font-black mb-6 blue-text">
+                            Accès Exclusifs : <span class="gold-text">Votre Clé vers l'Inaccessible</span>
+                        </h2>
+                        <p class="text-xl text-blue-light mb-8 leading-relaxed">
+                            Ouvrez les portes des lieux les plus secrets et des événements les plus prisés. SIMPL' est votre passe-partout pour des moments que l'argent ne peut habituellement pas acheter.
+                        </p>
+                        
+                        <div class="space-y-6 mb-10">
+                            <div class="flex items-start bg-white-pearl rounded-2xl p-5 border border-silver-gray shadow-md">
+                                <div class="w-14 h-14 bg-gold-luxury rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg">
+                                    <span class="material-icons text-blue-marine">vpn_key</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-marine mb-2">Accès VIP Événements</h3>
+                                    <p class="text-blue-light">Places privilégiées et accès aux coulisses des événements les plus exclusifs.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white-pearl rounded-2xl p-5 border border-silver-gray shadow-md">
+                                <div class="w-14 h-14 bg-gold-luxury rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg">
+                                    <span class="material-icons text-blue-marine">groups</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-marine mb-2">Rencontres Privées</h3>
+                                    <p class="text-blue-light">Échanges privilégiés avec des personnalités influentes et des experts locaux.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white-pearl rounded-2xl p-5 border border-silver-gray shadow-md">
+                                <div class="w-14 h-14 bg-gold-luxury rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg">
+                                    <span class="material-icons text-blue-marine">visibility</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-marine mb-2">Visites Privatisées</h3>
+                                    <p class="text-blue-light">Découvertes hors des sentiers battus dans des lieux habituellement inaccessibles.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-8 py-4 rounded-full font-semibold transition-all duration-300 border-glow shine-effect group inline-flex items-center">
+                            <span class="flex items-center">
+                                Découvrir nos accès exclusifs
+                                <span class="material-icons ml-2 transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expérience Signature -->
+    <section class="py-20 experience-bg relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-5xl mx-auto fade-in-element">
+                <div class="bg-white-pearl rounded-3xl p-8 md:p-12 text-center border border-silver-gray shadow-lg">
+                    <div class="bg-gold-luxury rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <span class="material-icons text-blue-marine text-3xl">auto_awesome</span>
+                    </div>
+                    <span class="text-sm font-bold gold-text tracking-widest uppercase">Expérience Signature</span>
+                    <h3 class="text-3xl md:text-4xl font-black mt-2 mb-4 blue-text">
+                        L'Expérience <span class="gold-text">WELOVE EYA</span> par SIMPL'
+                    </h3>
+                    <p class="text-xl text-blue-light mt-4 max-w-3xl mx-auto leading-relaxed">
+                        <span class="blue-text font-bold">Plongez dans l'énergie du Bénin avec WeLoveEya.</span> Une immersion exclusive dans l'afrobeat et les cultures urbaines, au cœur de Cotonou. Une expérience unique, orchestrée pour vous.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="welov.html" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-6 py-3 rounded-full font-semibold transition-all duration-300 border-glow shine-effect inline-block">
+                            Découvrir l'Expérience
+                        </a>
+                        <a href="avis.html" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-6 py-3 rounded-full font-semibold transition-all duration-300 border-glow shine-effect inline-block">
+                            Voir les témoignages
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section class="py-20 bg-silver-gray relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 fade-in-element blue-text">
+                    Questions <span class="gold-text">Fréquentes</span>
+                </h2>
+                <p class="text-xl text-blue-light max-w-3xl mx-auto fade-in-element">
+                    Trouvez rapidement des réponses à vos interrogations sur nos services de conciergerie premium.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white-pearl rounded-2xl p-1 border border-silver-gray fade-in-element shadow-md">
+                    <div class="accordion-item">
+                        <button class="accordion-header w-full flex justify-between items-center py-6 px-6 text-left">
+                            <span class="text-lg font-medium text-blue-marine">Comment fonctionne le processus de consultation initiale ?</span>
+                            <span class="material-icons rotate-icon gold-text">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="pb-6 px-6 text-blue-light">
+                                <p>Notre processus de consultation commence par une écoute attentive de vos désirs, aspirations et contraintes. Nous organisons une rencontre (en personne ou virtuelle) pour comprendre vos attentes, puis nous élaborons une proposition sur mesure détaillant les expériences que nous pouvons créer pour vous.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header w-full flex justify-between items-center py-6 px-6 text-left">
+                            <span class="text-lg font-medium text-blue-marine">Quelle est la différence entre vos services et une agence de voyage traditionnelle ?</span>
+                            <span class="material-icons rotate-icon gold-text">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="pb-6 px-6 text-blue-light">
+                                <p>SIMPL' va bien au-delà des services d'une agence de voyage traditionnelle. Nous ne nous contentons pas de réserver des vols et des hôtels. Nous créons des expériences immersives et personnalisées, avec accès à des lieux et événements exclusifs, un service de conciergerie 24/7, et une attention aux détails qui transforme un simple voyage en une aventure mémorable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header w-full flex justify-between items-center py-6 px-6 text-left">
+                            <span class="text-lg font-medium text-blue-marine">Proposez-vous des services pour les événements d'entreprise ?</span>
+                            <span class="material-icons rotate-icon gold-text">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="pb-6 px-6 text-blue-light">
+                                <p>Absolument. Nous concevons et organisons des événements d'entreprise sur mesure, des incentives de luxe aux séminaires exclusifs. Nos services incluent la logistique complète, l'accès à des lieux prestigieux, des activités team-building uniques, et la gestion de tous les détails pour garantir le succès de votre événement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header w-full flex justify-between items-center py-6 px-6 text-left">
+                            <span class="text-lg font-medium text-blue-marine">Quels sont les délais nécessaires pour organiser une expérience sur mesure ?</span>
+                            <span class="material-icons rotate-icon gold-text">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="pb-6 px-6 text-blue-light">
+                                <p>Les délais varient selon la complexité de l'expérience. Pour un voyage sur mesure, nous recommandons au moins 4 à 6 semaines pour garantir la qualité et l'exclusivité des réservations. Pour les événements complexes ou les expériences haut de gamme, un délai de 2 à 3 mois est préférable. Cependant, nous sommes également experts dans l'organisation d'expériences de dernière minute avec la même exigence de qualité.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center fade-in-element">
+                    <p class="text-blue-marine mb-4">Vous ne trouvez pas la réponse à votre question ?</p>
+                    <a href="https://wa.me/+22991464297" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-6 py-3 rounded-full font-semibold transition-all duration-300 border-glow inline-block">
+                        Contacter notre équipe
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section CTA Finale -->
+    <section class="py-20 bg-blue-marine relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 fade-in-element text-white-pearl">
+                Concrétisons Votre <span class="gold-text">Projet le Plus Ambitieux</span>
+            </h2>
+            <p class="text-xl text-gold-pale max-w-3xl mx-auto mb-10 fade-in-element">
+                Partagez avec nous vos envies, même les plus folles. Notre équipe est prête à relever le défi et à concevoir une expérience qui dépassera toutes vos attentes.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-element">
+                <a href="contact.html" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-8 py-4 rounded-full font-semibold transition-all duration-300 border-glow shine-effect inline-block">
+                    Demandez Votre Consultation Privée
+                </a>
+                <button class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-8 py-4 rounded-full font-semibold transition-all duration-300 border-glow shine-effect">
+                    Télécharger notre brochure
+                </button>
+            </div>
+            
+            <p class="gold-text text-sm mt-8 fade-in-element">
+                Réponse sous 24h • Consultation sans engagement • Équipe dédiée
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="/assets/img/Sans écriture.png" alt="Logo SIMPL'" style="height: 40px; border-radius: 10px;">
+                    <span class="logo-text">SIMPL'</span>
+                </div>
+                <p class="footer-description">L'Art de Simplifier l'Exceptionnel. Nous créons des expériences de voyage uniques et personnalisées au Bénin.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <span class="material-symbols-outlined">facebook</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-symbols-outlined">instagram</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-symbols-outlined">linkedin</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="services.html">Nos Services</a></li>
+                    <li><a href="histoire.html">Notre Histoire</a></li>
+                    <li><a href="welov.html">Evènements</a></li>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <span class="material-symbols-outlined icon">location_on</span>
+                        <span>Cotonou, Bénin</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined icon">call</span>
+                        <span>+229 0191464297</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined icon">mail</span>
+                        <span>simplagence@zohomail.com</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Légal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Mentions Légales</a></li>
+                    <li><a href="#">Politique de Confidentialité</a></li>
+                    <li><a href="#">Conditions Générales</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 SIMPL'. Tous droits réservés | Conciergerie d'excellence au Bénin.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/services.js" ></script>
+</body>
+</html>

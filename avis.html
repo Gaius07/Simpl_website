@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPL' - Témoignages</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/avis.css">
+</head>
+<body class="bg-white-pearl">
+    <!-- Effet de particules en arrière-plan -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Bouton Accueil simplifié -->
+    <a href="index.html" class="home-button">
+        <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 5px;">home</span>
+        Accueil
+    </a>
+
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="flex flex-1 justify-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-5">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <!-- HeroSection -->
+                    <main class="flex flex-col gap-16 md:gap-24 py-10 md:py-20">
+                        <section class="@container animate-on-scroll">
+                            <div class="@[480px]:p-4">
+                                <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 text-center animate-parallax" data-alt="A beautiful, abstract pattern inspired by Beninese art with earthy tones" style='background-image: linear-gradient(rgba(30, 42, 71, 0.5) 0%, rgba(30, 42, 71, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB6kj_wTe-aMfy-5DUTC9OmpDf8GMk067Lqs1ihEKsENSTZYmZuodr652VOdQnxIelf2R3qw3swx3k4KEE_zYx35hV1wVIRC2Mt9BSCc3I9MTnBQE6oNhP3S-8qesh1-STogbx2VM1H75mQyvnv5QokAyJ0YAMJNkHfobqs8b4CI31HgBSKSHNrAOzTze0opi29SQf1VuQhxSE0_l65y-fzTbYFmprVzu-Hm7kQmOvhdqAaIGm68ffvyXrktwCs7pmgAV3Y-Yt_yhg8");'>
+                                    <div class="flex flex-col gap-4 max-w-3xl">
+                                        <h1 class="text-white-pearl text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] text-shimmer-effect">
+                                            Ils ont vécu l'exceptionnel. L'Art de Simplifier, raconté par nos clients.
+                                        </h1>
+                                        <h2 class="text-gold-pale text-base font-normal leading-normal @[480px]:text-lg @[480px]:font-normal @[480px]:leading-normal animate-fade-in">
+                                            Découvrez comment SIMPL' transforme chaque séjour au Bénin en une expérience inoubliable, à travers les yeux de ceux qui nous ont fait confiance.
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Video Testimonials -->
+                        <section class="flex flex-col gap-6 animate-on-scroll">
+                            <div class="px-4">
+                                <h2 class="text-blue-marine text-3xl font-bold leading-tight tracking-[-0.015em]">Paroles de Voyageurs</h2>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+                                <!-- Témoignage 1 -->
+                                <div class="flex flex-col gap-3 group gradient-border">
+                                    <div class="relative bg-cover bg-center flex items-center justify-center rounded-lg aspect-video cursor-pointer overflow-hidden" data-alt="Client testimonial video thumbnail" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRrkoV18XRqQSzENz-aui2VIb-upIWmYqkfZdXiGnl48aYwfc2wMlkqdx23YYNnMnik02QsethnV3fRGRra8ZNYgUNj8zEA9gNmUHpbzfwt7oGh7xNyX8CBKLPhlMYWAINmTCJimjbfexH5dfRLc6kx2O1HPuag7i9elWq9M17IbYZhQTs9wJ8h_Qi8N7szjg6MJQP0Vq5pDb29_-vNECJCV37m-8zNcTiUoZKc50Joui5ZN9JjOCpVjE2SzCiWx3YgZbH0Q_1iwjP");'>
+                                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                                        <div class="z-10 p-4 bg-white/20 backdrop-blur-sm rounded-full text-white group-hover:scale-110 transition-transform duration-300">
+                                            <span class="material-symbols-outlined text-5xl !leading-none">play_arrow</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col p-2">
+                                        <p class="text-blue-marine text-lg font-bold leading-tight">"Un voyage inoubliable."</p>
+                                        <p class="text-gold-luxury text-sm font-medium">John D., USA</p>
+                                    </div>
+                                </div>
+
+                                <!-- Témoignage 2 -->
+                                <div class="flex flex-col gap-3 group gradient-border">
+                                    <div class="relative bg-cover bg-center flex items-center justify-center rounded-lg aspect-video cursor-pointer overflow-hidden" data-alt="Client testimonial video thumbnail" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfH2PL78R9VjwDPnLNYistbekWrjUFnS_gPDM1eNZhknLBRQpzPXgNajUsy15hOhpbPhZzaVZn3ESqd-MplXicrB4NG7kIdNFeUgxuKOR_zWLBjiepuo1mD9LN8H37DPw5UOMtxDK-mtID60vuVnKFVz-2r1EF6MdFWieCEZRrwIyO588MGLaIx32W8JK-Ey6G-aS05tSJMyy4_3yRMQrWbk-35z6xkn_6Lq8nq7QONgAekVo1aeObtQjPMPGQqeMdoaOPx6Msi19J");'>
+                                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                                        <div class="z-10 p-4 bg-white/20 backdrop-blur-sm rounded-full text-white group-hover:scale-110 transition-transform duration-300">
+                                            <span class="material-symbols-outlined text-5xl !leading-none">play_arrow</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col p-2">
+                                        <p class="text-blue-marine text-lg font-bold leading-tight">"Le service était impeccable."</p>
+                                        <p class="text-gold-luxury text-sm font-medium">Amina K., Diaspora</p>
+                                    </div>
+                                </div>
+
+                                <!-- Témoignage 3 -->
+                                <div class="flex flex-col gap-3 group gradient-border">
+                                    <div class="relative bg-cover bg-center flex items-center justify-center rounded-lg aspect-video cursor-pointer overflow-hidden" data-alt="Client testimonial video thumbnail" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5aUE-iD6_mQ1pCpW1h1aIXI39O8kj6gUlay7i1TLZ9uuvXoi58YO9DHo_8j_9BkKe2P0wH3Djui7dgBiU96haHes7EKKpxpZ-cDHLyJfCgXN3EyL9IO-erYisdhXs4tgiwD_Uv2wDS5I9_lpGsQTOINB23Lz6g7Kc19TplkA8T6hPLH1RETdnYzAWwlUyrdbRF_tpXFhwtnIm197I3AUUbHq0ZfbkFs23ZLEaYBm0qcIS99mc8nzjqSqX0QGAvV-OKyG06wJQxf0b");'>
+                                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                                        <div class="z-10 p-4 bg-white/20 backdrop-blur-sm rounded-full text-white group-hover:scale-110 transition-transform duration-300">
+                                            <span class="material-symbols-outlined text-5xl !leading-none">play_arrow</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col p-2">
+                                        <p class="text-blue-marine text-lg font-bold leading-tight">"Le meilleur voyage de notre vie."</p>
+                                        <p class="text-gold-luxury text-sm font-medium">Famille Dubois, France</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Case Studies -->
+                        <section class="flex flex-col gap-6 animate-on-scroll">
+                            <div class="px-4">
+                                <h2 class="text-blue-marine text-3xl font-bold leading-tight tracking-[-0.015em]">Nos Histoires de Succès</h2>
+                            </div>
+                            <div class="flex flex-col gap-8 p-4">
+                                <!-- Étude de cas 1 -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-silver-gray p-6 rounded-xl hover:scale-[1.01] transition-transform duration-300">
+                                    <div class="w-full h-full min-h-[250px] bg-cover bg-center rounded-lg animate-float" data-alt="A happy family enjoying a cultural event in Benin" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxO7pF9SWNyfapQC7zYwvlxbextc5VwlTR89BlIwgR1Gbq7hrK_A020o7Khccj-sbAcTra7pZZl0HJthpHsJqx6T29_0wBWmpziGxUd4Pk1n3PdIUrRvEyG2cc-8Y8JmlqqRYWIPEEFwcgX3fUuAJw57y6J91h9xZvywBVtynOQuPgux9ULuZ1_o0UcfwJGgBwdYqyX00xUitOQVNOZxWVpt2evJkg552xRHxBujsCVDGvjMl7Y2ISztBbQVWzXJJh45vkesvWL2nX');"></div>
+                                    <div class="flex flex-col gap-4 items-start">
+                                        <h3 class="text-2xl font-bold text-blue-marine">Le Séjour d'Exception de la Famille Diallo</h3>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs font-semibold px-3 py-1 bg-gold-pale text-gold-luxury rounded-full animate-pulse">WELOVE EYA</span>
+                                            <span class="text-xs font-semibold px-3 py-1 bg-gold-pale text-gold-luxury rounded-full">Séjour Familial</span>
+                                            <span class="text-xs font-semibold px-3 py-1 bg-gold-pale text-gold-luxury rounded-full">Culture</span>
+                                        </div>
+                                        <p class="text-blue-light text-base leading-relaxed">
+                                            Découvrez comment nous avons orchestré une expérience immersive pour la famille Diallo durant le festival WELOVE EYA, combinant festivités, découvertes culturelles et moments de détente exclusifs.
+                                        </p>
+                                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-gold-luxury hover:bg-gold-dark text-blue-marine text-base font-bold leading-normal tracking-[0.015em] mt-2 hover:scale-105 transition-transform duration-300">
+                                            <span class="truncate">Découvrir l'Histoire</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Étude de cas 2 -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-silver-gray p-6 rounded-xl hover:scale-[1.01] transition-transform duration-300">
+                                    <div class="w-full h-full min-h-[250px] bg-cover bg-center rounded-lg order-first md:order-last animate-float" data-alt="A couple exploring the historic routes of Ouidah, Benin" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9qEulgnRhuYgBZinImLzDLboUJ59RplGr-29uQeg8GI1tPye-imBXFyzg10Xf8BehXlqyykUOVWNNxBBFcTNF_ayvDJKmnX0D2eWdnGayYvTJM4FdsB6RCJNgvJ_ZW5_nLYYcvKuVLdeTPz2wPbLgjB2mFatoGlyC60YCEx4FpuufTxkkbq-Jq6hPpDrRaKMMct6nIkHZLFXVURE08knvUsWE8PkBENViuqU7WMZFImPuxpmOaZM5trD4gozegaf_n1fIItkeQWnn');"></div>
+                                    <div class="flex flex-col gap-4 items-start">
+                                        <h3 class="text-2xl font-bold text-blue-marine">L'escapade Romantique de M. &amp; Mme. Chen</h3>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs font-semibold px-3 py-1 bg-gold-pale text-gold-luxury rounded-full">Lune de Miel</span>
+                                            <span class="text-xs font-semibold px-3 py-1 bg-gold-pale text-gold-luxury rounded-full">Histoire &amp; Patrimoine</span>
+                                            <span class="text-xs font-semibold px-3 py-1 bg-gold-pale text-gold-luxury rounded-full">Gastronomie</span>
+                                        </div>
+                                        <p class="text-blue-light text-base leading-relaxed">
+                                            Un voyage sur mesure sur la route des esclaves à Ouidah, ponctué de dîners privés dans des lieux d'exception et de séjours dans des hôtels de charme, pour une lune de miel inoubliable.
+                                        </p>
+                                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-gold-luxury hover:bg-gold-dark text-blue-marine text-base font-bold leading-normal tracking-[0.015em] mt-2 hover:scale-105 transition-transform duration-300">
+                                            <span class="truncate">Lire le Récit</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Partners -->
+                        <section class="flex flex-col gap-6 animate-on-scroll">
+                            <div class="px-4 text-center">
+                                <h2 class="text-blue-marine text-3xl font-bold leading-tight tracking-[-0.015em]">Un Réseau de Confiance</h2>
+                                <p class="text-blue-light text-lg mt-2 max-w-2xl mx-auto">Nous collaborons avec les meilleurs pour vous garantir une expérience sans compromis.</p>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex flex-wrap justify-center items-center gap-x-12 sm:gap-x-16 md:gap-x-20 gap-y-8">
+                                    <img class="h-12 sm:h-14 lg:h-16 brightness-0 opacity-70 hover:opacity-100 transition-opacity hover:scale-110 transition-transform duration-300" data-alt="WELOVE EYA Festival Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArh9F--fNnWkQ6mHr6LjNQlSjMx1xk0VTeiaK-tRhp6vcTMpqJymsNcDOQ2SkUhVF8pnysjViYcAIsF23qqkVVN-YK4V119qoC_g3RdSUtG_JDEk1mDDJOmudLlnASZCJGDFAdDYACD7MMgAR7g4J3L6y4wut5JYxKlZAtfUhOH7rBcxFPQkuw-YGuki3Qqt5SzyyXtQloTZbn8t5t1AGAah0aUgugeihuCVl-inAHbIjVjLv8mYkqdyCn1_oCTJp8Uko5dxAFck58"/>
+                                    <img class="h-8 sm:h-10 lg:h-12 brightness-0 opacity-70 hover:opacity-100 transition-opacity hover:scale-110 transition-transform duration-300" data-alt="Air France Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWUPt2m4FHClR6MOLzIKyEEnaG5Pro4HGSpHIHXpvl-_t6oELURhnyE6XKl3XLWk_-JRCWhZ5Xfq0BCk125nv2Q0-luHLqitqk70Z9h3D4wkrnlXzhUA0bOJiBXHCpj7AQwlLT4nYzUiliO1kSDHWDQdIL30HvxUnr5KjLjPjyo_4Uuttcl3Rz7vaPgTwgoxfpvhwW4Es5UgB4HUPefwnx-jHJJRNX3_D5tsn7ign3vZCDCbNo27VpLpqUVB600yqGygFDNW1SUtVL"/>
+                                    <img class="h-10 sm:h-12 lg:h-14 brightness-0 opacity-70 hover:opacity-100 transition-opacity hover:scale-110 transition-transform duration-300" data-alt="Novotel Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB31LVVInq78f3iZoh8axshcvHqdLk1Iw9p_yw-ItF5LFqpf0yyCi0RVChe0P6lsTHj8ncBn1V06buraG0Ovf4rejK2RAYHdWQbBiS50zQetnMt1SP0eIef5sDx9Vq1LcyZbpn5hJpbJVe19d3w2fl5oTqhZz6NLRsR3z75rsX3IBEd6b-st8qSSwBoJFuskbiFcVGvFpOgYxd6uND_DAvFiqutw7q_O6ASeWEvBOpdFfToOcRAeEpacciOS6SzC8smukqJ2OmySb1H"/>
+                                    <img class="h-12 sm:h-14 lg:h-16 brightness-0 opacity-70 hover:opacity-100 transition-opacity hover:scale-110 transition-transform duration-300" data-alt="Hotel PLM Aleria Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEzE8XoO_-Fe2rPwQLN9MJA_SADaHlTLEbZTYh4wL9TFLvONwE19smLppfOuo2n4mlWWhctEg0e_7IbrX5BMglgOXLq3mgh488MHDk6AdX4cXFpihoxqs-szNf937zTBNDdGRLItx-5-OkW59CzcWjeP0z95dPnGoK6zlVJuFfNIZ5UQ24yl_jhLrCCvmx_H3HgQ-iskJB0DvipqFhvGm2NytqusZPBt9MXxgzZ5jJlumX44tESfupNKqU1h-O6czsvLcUocba7Kuj"/>
+                                    <img class="h-8 sm:h-9 lg:h-10 brightness-0 opacity-70 hover:opacity-100 transition-opacity hover:scale-110 transition-transform duration-300" data-alt="Canal+ Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2kGLoVYBPFrY6l9GadsU-z4h6gLG6nx2zVjiPtSxWRtHbEVMQPoaQZ4ENN3mb4z6aGGR42cq7sra_-rXKtR_HX8psEDOUPvLjjTWzK2yclZeaWMc3cXYEWHEz88CVwTlYmy8QMBUKeVRtdMdSBpzmpTkAJTI4AthpXcbG1GvxtZGnFAzXVyvIJ6Q4VOoM0J48doHyV02sKQNh6M2hFt_djJC7mKLlj39LclvLjMuWGdApw4Lv4TJcTNroGju3Nkl7-LHZ4xzXuZod"/>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- CTA Banner -->
+                        <section class="p-4 animate-on-scroll">
+                            <div class="flex flex-col gap-6 items-center justify-center text-center bg-blue-marine text-white-pearl p-10 md:p-16 rounded-xl animate-scale-in">
+                                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Prêt à écrire votre propre histoire au Bénin ?</h2>
+                                <p class="max-w-xl text-gold-pale text-lg">Laissez-nous simplifier l'exceptionnel pour vous. Contactez nos experts et commencez à rêver à votre prochaine aventure.</p>
+                                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-gold-luxury hover:bg-gold-dark text-blue-marine text-base font-bold leading-normal tracking-[0.015em] mt-4 hover:scale-105 transition-transform duration-300 animate-pulse-glow">
+                                    <span class="truncate">Commencer l'Expérience SIMPL'</span>
+                                </button>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/avis.js" ></script>
+</body>
+</html>

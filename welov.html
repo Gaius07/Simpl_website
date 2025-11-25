@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPL' - Expérience WELOVE EYA | Conciergerie Premium</title>
+    <meta name="description" content="Découvrez l'expérience WELOVE EYA par SIMPL' - Immersion culturelle exclusive au Bénin avec conciergerie premium">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/events.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body class="bg-white-pearl">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="/assets/img/Sans écriture.png" alt="Logo SIMPL' - Conciergerie premium">    
+            <span class="logo-text">SIMPL'</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Nos Services</a>
+            <a href="histoire.html">Notre Histoire</a>
+            <a href="welov.html">Événements</a>
+            <a href="contact.html" class="nav-cta">Nous Contacter</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
+            <span class="material-icons">menu</span>
+        </button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="/assets/img/Sans écriture.png" alt="Logo SIMPL'" style="height: 40px; border-radius: 10px;">
+                <span class="logo-text" style="color: var(--blue-marine);">SIMPL'</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+        
+        <div class="mobile-nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Nos Services</a>
+            <a href="histoire.html">Notre Histoire</a>
+            <a href="welov.html">Événements</a>
+            <a href="contact.html" class="mobile-cta">Nous Contacter</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                 alt="Festival WELOVE EYA - Expérience culturelle au Bénin" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <div class="inline-flex items-center bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-gold-luxury/30">
+                    <span class="material-icons text-gold-luxury mr-2 text-sm">celebration</span>
+                    <span class="text-sm font-medium text-gold-pale">Expérience Exclusive - Édition Limitée</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white-pearl">
+                    WELOVE EYA<br>
+                    <span class="text-gold-luxury">Réinventé</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gold-pale mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Une immersion culturelle totale au cœur du Bénin, où chaque détail est orchestré pour une expérience mémorable et sans souci.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#tarifs" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-8 py-4 rounded-full font-semibold transition-colors flex items-center justify-center">
+                        <span class="mr-2">Réserver mon expérience</span>
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                    <a href="https://wa.me/+22991464297" class="border border-gold-luxury hover:bg-gold-luxury hover:text-blue-marine text-gold-luxury px-8 py-4 rounded-full font-semibold transition-colors flex items-center justify-center">
+                        Contacter notre concierge
+                    </a>
+                </div>
+                
+                <div class="mt-16 flex flex-wrap justify-center gap-8 text-gold-pale">
+                    <div class="flex items-center">
+                        <span class="material-icons text-gold-luxury mr-2">calendar_today</span>
+                        <span>27-28 Décembre 2025</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="material-icons text-gold-luxury mr-2">location_on</span>
+                        <span>Cotonou, Bénin</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="material-icons text-gold-luxury mr-2">groups</span>
+                        <span>Groupe limité</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <span class="material-icons text-gold-luxury">expand_more</span>
+        </div>
+    </section>
+
+    <!-- Section Expérience -->
+    <section id="experience" class="py-20 bg-white-pearl">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-blue-marine">L'Expérience SIMPL'</h2>
+                <p class="text-xl text-blue-light max-w-3xl mx-auto">
+                    Plongez dans une aventure culturelle où l'authenticité rencontre l'exclusivité. 
+                    Nous transformons votre participation au festival en un voyage sensoriel inoubliable.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Expérience culturelle immersive au Bénin" class="rounded-2xl shadow-2xl">
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-blue-marine">Une immersion totale dans la culture béninoise</h3>
+                    <p class="text-blue-light mb-6">
+                        Au-delà des performances artistiques, nous vous offrons un accès privilégié à l'âme du Bénin. 
+                        Rencontres authentiques, découvertes culinaires et moments d'exception rythmeront votre séjour.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 mt-1">check_circle</span>
+                            <div>
+                                <h4 class="font-semibold text-blue-marine">Accès aux coulisses</h4>
+                                <p class="text-blue-light text-sm">Rencontres privilégiées avec les artistes et organisateurs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 mt-1">check_circle</span>
+                            <div>
+                                <h4 class="font-semibold text-blue-marine">Expériences sensorielles</h4>
+                                <p class="text-blue-light text-sm">Ateliers, dégustations et découvertes immersives</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 mt-1">check_circle</span>
+                            <div>
+                                <h4 class="font-semibold text-blue-marine">Confort absolu</h4>
+                                <p class="text-blue-light text-sm">Hébergement premium et transport dédié</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 mt-1">check_circle</span>
+                            <div>
+                                <h4 class="font-semibold text-blue-marine">Assistance personnalisée</h4>
+                                <p class="text-blue-light text-sm">Conciergerie dédiée disponible 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section Services Premium -->
+    <section id="services" class="py-20 bg-silver-gray">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-blue-marine">Nos Services Premium</h2>
+                <p class="text-xl text-blue-light max-w-3xl mx-auto">
+                    Chaque détail est pensé pour votre confort et votre immersion. 
+                    Notre équipe dédiée s'occupe de tout pour que vous ne soyez que dans l'émotion.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white-pearl rounded-2xl p-8 card-hover border border-silver-gray">
+                    <div class="w-16 h-16 bg-gold-pale rounded-full flex items-center justify-center mb-6">
+                        <span class="material-icons text-gold-luxury text-3xl">flight</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-marine">Logistique Complète</h3>
+                    <p class="text-blue-light mb-6">
+                        Prise en charge dès votre arrivée jusqu'à votre départ. Transferts, hébergement et déplacements organisés avec soin.
+                    </p>
+                    <ul class="space-y-2 text-blue-light">
+                        <li class="flex items-center">
+                            <span class="material-icons text-gold-luxury mr-2 text-sm">check</span>
+                            Transferts aéroport privés
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-gold-luxury mr-2 text-sm">check</span>
+                            Hébergement 4-5 étoiles
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-gold-luxury mr-2 text-sm">check</span>
+                            Voiture avec chauffeur dédié
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white-pearl rounded-2xl p-8 card-hover border border-silver-gray">
+                    <div class="w-16 h-16 bg-gold-pale rounded-full flex items-center justify-center mb-6">
+                        <span class="material-icons text-gold-luxury text-3xl">restaurant</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-marine">Expériences Culinaires</h3>
+                    <p class="text-blue-light mb-6">
+                        Découverte de la gastronomie béninoise à travers des expériences exclusives et des restaurants sélectionnés.
+                    </p>
+                    <ul class="space-y-2 text-blue-light">
+                        <li class="flex items-center">
+                            <span class="material-icons text-gold-luxury mr-2 text-sm">check</span>
+                            Dîners gastronomiques privés
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-gold-luxury mr-2 text-sm">check</span>
+                            Ateliers de cuisine traditionnelle
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-gold-luxury mr-2 text-sm">check</span>
+                            Dégustations de produits locaux
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white-pearl rounded-2xl p-8 card-hover border border-silver-gray">
+                    <div class="w-16 h-16 bg-gold-pale rounded-full flex items-center justify-center mb-6">
+                        <span class="material-icons text-gold-luxury text-3xl">spa</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-marine">Services Sur Mesure</h3>
+                    <p class="text-blue-light mb-6">
+                        Personnalisez votre expérience selon vos envies avec nos services additionnels premium.
+                    </p>
+                    <ul class="space-y-2 text-blue-light">
+                        <li class="flex items-center">
+                            <span class="material-icons text-gold-luxury mr-2 text-sm">check</span>
+                            Guide culturel privé
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-gold-luxury mr-2 text-sm">check</span>
+                            Services bien-être in situ
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-gold-luxury mr-2 text-sm">check</span>
+                            Photographe personnel
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section Immersion Culturelle -->
+    <section id="immersion" class="py-20 bg-white-pearl">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-blue-marine">Immersion Culturelle Exclusive</h2>
+                <p class="text-xl text-blue-light max-w-3xl mx-auto">
+                    Découvrez des expériences uniques qui vous connecteront profondément à la culture béninoise, au-delà des sentiers battus.
+                </p>
+            </div>
+            
+            <div class="experience-grid">
+                <!-- Expérience 1 -->
+                <div class="experience-card">
+                    <img src="/assets/img/atisans.jpg" 
+                         alt="Ateliers d'artisanat local avec des artisans béninois" class="experience-image">
+                    <div class="experience-overlay">
+                        <h3 class="text-xl font-bold mb-2">Ateliers d'Artisanat Local</h3>
+                        <p class="text-gold-pale">Rencontre avec des artisans béninois et initiation aux techniques traditionnelles.</p>
+                    </div>
+                    <div class="experience-icon">
+                        <span class="material-icons text-white-pearl">brush</span>
+                    </div>
+                </div>
+                
+                <!-- Expérience 2 -->
+                <div class="experience-card">
+                    <img src="/assets/img/culinaire.jpg" 
+                         alt="Dégustations gastronomiques de cuisine béninoise" class="experience-image">
+                    <div class="experience-overlay">
+                        <h3 class="text-xl font-bold mb-2">Dégustations Gastronomiques</h3>
+                        <p class="text-gold-pale">Exploration de la cuisine béninoise avec des chefs locaux dans des lieux insolites.</p>
+                    </div>
+                    <div class="experience-icon">
+                        <span class="material-icons text-white-pearl">restaurant</span>
+                    </div>
+                </div>
+                
+                <!-- Expérience 3 -->
+                <div class="experience-card">
+                    <img src="/assets/img/rythmes.jpg" 
+                         alt="Initiation aux rythmes traditionnels béninois" class="experience-image">
+                    <div class="experience-overlay">
+                        <h3 class="text-xl font-bold mb-2">Initiation aux Rythmes Locaux</h3>
+                        <p class="text-gold-pale">Séances privées de percussions et découverte des rythmes traditionnels béninois.</p>
+                    </div>
+                    <div class="experience-icon">
+                        <span class="material-icons text-white-pearl">music_note</span>
+                    </div>
+                </div>
+                
+                <!-- Expérience 4 -->
+                <div class="experience-card">
+                    <img src="/assets/img/guidée.jpg" 
+                         alt="Visites guidées privées des sites culturels" class="experience-image">
+                    <div class="experience-overlay">
+                        <h3 class="text-xl font-bold mb-2">Visites Guidées Privées</h3>
+                        <p class="text-gold-pale">Découverte des sites culturels majeurs avec des guides spécialisés.</p>
+                    </div>
+                    <div class="experience-icon">
+                        <span class="material-icons text-white-pearl">explore</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-blue-light mb-6">Chaque expérience est personnalisable selon vos intérêts et disponibilités</p>
+                <a href="https://wa.me/+22991464297" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-6 py-3 rounded-full font-medium transition-colors flex items-center justify-center mx-auto w-fit">
+                    <span class="material-icons mr-2">person</span>
+                    Personnaliser mon expérience
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section Tarifs -->
+    <section id="tarifs" class="py-20 bg-silver-gray">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-blue-marine">Nos Formules Exclusives</h2>
+                <p class="text-xl text-blue-light max-w-3xl mx-auto">
+                    Choisissez l'expérience qui correspond à vos attentes. Tous nos forfaits incluent les services essentiels pour un séjour mémorable.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Formule Essentielle -->
+                <div class="price-card bg-white-pearl rounded-2xl p-8 flex flex-col h-full border border-silver-gray">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-blue-marine mb-2">Essentielle</h3>
+                        <p class="text-blue-light">L'expérience festival sans les tracas logistiques</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-black text-blue-marine">149€</span>
+                            <span class="text-blue-light ml-2">/personne</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Billet d'entrée au festival 3 jours</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Transfert aéroport-hôtel aller-retour</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Hébergement 3 étoiles (2 nuits)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Petits-déjeuners inclus</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Accès aux zones communes du festival</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/+22991464297" class="w-full bg-silver-gray hover:bg-gold-luxury hover:text-blue-marine text-blue-marine font-bold py-3 rounded-lg transition-colors text-center block">
+                        Choisir cette formule
+                    </a>
+                </div>
+                
+                <!-- Formule Privilège -->
+                <div class="price-card featured bg-white-pearl rounded-2xl p-8 flex flex-col h-full">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-blue-marine mb-2">Privilège</h3>
+                        <p class="text-blue-light">L'expérience complète avec accès privilégié</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-black text-blue-marine">299€</span>
+                            <span class="text-blue-light ml-2">/personne</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Tout inclus dans la formule Essentielle</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Billet VIP avec accès backstage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Hébergement 4 étoiles (3 nuits)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Restauration premium incluse</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Transport privé durant le séjour</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Accès aux événements exclusifs SIMPL'</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/+22991464297" class="w-full bg-gold-luxury hover:bg-gold-dark text-blue-marine font-bold py-3 rounded-lg transition-colors text-center block">
+                        Choisir cette formule
+                    </a>
+                </div>
+                
+                <!-- Formule Prestige -->
+                <div class="price-card bg-white-pearl rounded-2xl p-8 flex flex-col h-full border border-silver-gray">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-blue-marine mb-2">Prestige</h3>
+                        <p class="text-blue-light">L'expérience ultime pour vivre le festival comme un VIP</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-black text-blue-marine">499€</span>
+                            <span class="text-blue-light ml-2">/personne</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Tout inclus dans la formule Privilège</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Hébergement 5 étoiles (3 nuits)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Rencontres exclusives avec les artistes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Conciergerie personnelle 24/7</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Expériences culturelles privées</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-gold-luxury mr-3 text-sm mt-0.5">check</span>
+                            <span class="text-blue-marine">Cadeaux et goodies exclusifs</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/+22991464297" class="w-full bg-silver-gray hover:bg-gold-luxury hover:text-blue-marine text-blue-marine font-bold py-3 rounded-lg transition-colors text-center block">
+                        Choisir cette formule
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-blue-light mb-4">Vous souhaitez personnaliser votre expérience ?</p>
+                <a href="https://wa.me/+22991464297" class="border border-gold-luxury hover:bg-gold-luxury hover:text-blue-marine text-gold-luxury px-6 py-3 rounded-full font-medium transition-colors inline-block">
+                    Contacter notre concierge pour une offre sur mesure
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section FAQ -->
+    <section id="faq" class="py-20 bg-white-pearl">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-blue-marine">Questions Fréquentes</h2>
+                <p class="text-xl text-blue-light max-w-3xl mx-auto">
+                    Trouvez rapidement des réponses à vos interrogations sur notre expérience WELOVE EYA.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="accordion-item">
+                    <button class="accordion-header w-full flex justify-between items-center py-6 text-left">
+                        <span class="text-lg font-medium text-blue-marine">Quelle est la politique d'annulation ?</span>
+                        <span class="material-icons rotate-icon text-gold-luxury">expand_more</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 text-blue-light">
+                            <p>Nous proposons une politique d'annulation flexible :</p>
+                            <ul class="mt-2 space-y-1 ml-5">
+                                <li>• Annulation jusqu'à 30 jours avant l'événement : remboursement intégral</li>
+                                <li>• Annulation entre 30 et 15 jours avant : remboursement à 50%</li>
+                                <li>• Annulation moins de 15 jours avant : pas de remboursement mais report possible sur une future édition</li>
+                            </ul>
+                            <p class="mt-2">Des conditions particulières peuvent s'appliquer selon les circonstances.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header w-full flex justify-between items-center py-6 text-left">
+                        <span class="text-lg font-medium text-blue-marine">Pouvons-nous adapter le programme à des régimes alimentaires spécifiques ?</span>
+                        <span class="material-icons rotate-icon text-gold-luxury">expand_more</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 text-blue-light">
+                            <p>Absolument. Notre service de conciergerie prend en compte toutes les restrictions et préférences alimentaires (végétarien, végétalien, sans gluten, allergies, etc.).</p>
+                            <p class="mt-2">Merci de nous informer au moment de la réservation pour que nous puissions adapter toutes les expériences culinaires en conséquence.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header w-full flex justify-between items-center py-6 text-left">
+                        <span class="text-lg font-medium text-blue-marine">L'événement est-il maintenu en cas de conditions météorologiques défavorables ?</span>
+                        <span class="material-icons rotate-icon text-gold-luxury">expand_more</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 text-blue-light">
+                            <p>Le festival WELOVE EYA a lieu quelles que soient les conditions météorologiques. Cependant, en cas d'intempéries exceptionnelles, nous adapterions le programme pour préserver la qualité de votre expérience.</p>
+                            <p class="mt-2">Toutes nos activités en extérieur ont des alternatives en intérieur prévues à l'avance. Votre confort et votre sécurité restent notre priorité.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header w-full flex justify-between items-center py-6 text-left">
+                        <span class="text-lg font-medium text-blue-marine">Quelles langues sont parlées par l'équipe d'accompagnement ?</span>
+                        <span class="material-icons rotate-icon text-gold-luxury">expand_more</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 text-blue-light">
+                            <p>Notre équipe de conciergerie est multilingue et parle couramment français, anglais et espagnol. Des interprètes peuvent être organisés sur demande pour d'autres langues.</p>
+                            <p class="mt-2">Tous les documents, briefings et communications sont disponibles en français et en anglais.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header w-full flex justify-between items-center py-6 text-left">
+                        <span class="text-lg font-medium text-blue-marine">Quel est le code vestimentaire recommandé ?</span>
+                        <span class="material-icons rotate-icon text-gold-luxury">expand_more</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 text-blue-light">
+                            <p>Le code vestimentaire est "chic décontracté" pour la plupart des activités. Pour les soirées et dîners, une tenue plus élégante est recommandée.</p>
+                            <p class="mt-2">Nous vous enverrons un guide détaillé avec des recommandations vestimentaires spécifiques pour chaque événement après votre réservation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-blue-light mb-4">Vous ne trouvez pas la réponse à votre question ?</p>
+                <a href="https://wa.me/+22991464297" class="bg-gold-luxury hover:bg-gold-dark text-blue-marine px-6 py-3 rounded-full font-medium transition-colors inline-block">
+                    Contacter notre équipe
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="/assets/img/Sans écriture.png" alt="Logo SIMPL'" style="height: 40px; border-radius: 10px;">
+                    <span class="logo-text">SIMPL'</span>
+                </div>
+                <p class="footer-description">L'Art de Simplifier l'Exceptionnel. Nous créons des expériences de voyage uniques et personnalisées au Bénin.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <span class="material-symbols-outlined"></span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-symbols-outlined"></span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-symbols-outlined"></span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="services.html">Nos Services</a></li>
+                    <li><a href="histoire.html">Notre Histoire</a></li>
+                    <li><a href="welov.html">Evènements</a></li>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <span class="material-symbols-outlined icon">location_on</span>
+                        <span>Cotonou, Bénin</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined icon">call</span>
+                        <span>+229 0191464297</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined icon">mail</span>
+                        <span>simplagence@zohomail.com</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Légal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Mentions Légales</a></li>
+                    <li><a href="#">Politique de Confidentialité</a></li>
+                    <li><a href="#">Conditions Générales</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 SIMPL'. Tous droits réservés | Conciergerie d'excellence au Bénin.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/events.js" ></script>
+</body>
+</html>

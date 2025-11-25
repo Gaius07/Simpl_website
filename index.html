@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>SIMPL' - Le Bénin Révélé</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="/assets/img/Sans écriture.png" alt="Logo SIMPL'">    
+            <span class="logo-text">SIMPL'</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#">Accueil</a>
+            <a href="services.html">Nos Services</a>
+            <a href="histoire.html">Notre Histoire</a>
+            <a href="welov.html">Evènements</a>
+            <a href="contact.html" class="nav-cta">Nous Contacter</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </nav>
+    
+    <!-- Menu mobile -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="/assets/img/Sans écriture.png" alt="Logo SIMPL'" style="height: 40px; border-radius: 10px;">
+                <span class="logo-text" style="color: var(--blue-marine);">SIMPL'</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        
+        <div class="mobile-nav-links">
+            <a href="#">Accueil</a>
+            <a href="services.html">Nos Services</a>
+            <a href="histoire.html">Notre Histoire</a>
+            <a href="welov.html">Evènements</a>
+            <a href="contact.html" class="mobile-cta">Nous Contacter</a>
+        </div>
+    </div>
+    
+    <!-- Hero Section avec vidéo -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="floating-particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Le Bénin Révélé</h1>
+            <p class="hero-subtitle">Votre aventure simplifiée au cœur de l'authenticité et de l'exception</p>
+            <button class="cta-button"><a href="welov.html" style="color: var(--blue-marine); text-decoration: none;">Créez Votre Expérience Unique</a></button>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span class="material-symbols-outlined">expand_more</span>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <h2 class="section-title">L'Art de Simplifier l'Exceptionnel</h2>
+        <p class="section-subtitle">Nous transformons votre voyage au Bénin en une expérience inoubliable, fluide et entièrement personnalisée.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <span class="material-symbols-outlined">map</span>
+                </div>
+                <h3 class="service-title">Voyage Sur-Mesure</h3>
+                <p class="service-description">Des itinéraires uniques conçus selon vos désirs, vos passions et votre rythme pour une expérience véritablement personnalisée.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <span class="material-symbols-outlined">key</span>
+                </div>
+                <h3 class="service-title">Accès Exclusifs</h3>
+                <p class="service-description">Des portes qui s'ouvrent sur des événements privés, des lieux secrets et des rencontres authentiques avec la culture béninoise.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <span class="material-symbols-outlined">shield</span>
+                </div>
+                <h3 class="service-title">Sérénité Totale</h3>
+                <p class="service-description">Une prise en charge complète de la logistique pour une tranquillité d'esprit absolue durant tout votre séjour.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Philosophie Section -->
+    <section class="section philosophy-section" id="philosophie">
+        <div class="philosophy-content">
+            <div class="philosophy-image">
+                <img src="/assets/img/photo_2025-11-04_14-55-23.jpg" alt="Notre philosophie">
+            </div>
+            <div class="philosophy-text">
+                <h3>Notre Philosophie</h3>
+                <p>Au cœur de SIMPL', une conviction profonde : le luxe réside dans l'authenticité et la fluidité. Nous croyons en un voyage qui éveille les sens, connecte à la culture locale et laisse une empreinte positive sur les communautés visitées.</p>
+                <p>Notre approche va au-delà du simple tourisme. Nous créons des expériences transformatrices qui célèbrent la richesse culturelle du Bénin tout en respectant son patrimoine et ses traditions.</p>
+                <a href="histoire.html" class="text-link">
+                    Découvrir notre histoire
+                    <span class="material-symbols-outlined" style="font-size: 1.2rem;">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- WELOVE EYA Section -->
+    <section class="section welove-section" id="welove">
+        <h2 class="section-title">L'Expérience WELOVE EYA</h2>
+        <p class="section-subtitle">Plongez au cœur du plus grand festival du Bénin avec un accès VIP exclusif. Vivez des moments uniques, des rencontres d'artistes et une immersion totale dans la créativité béninoise.</p>
+        
+        <div class="welove-cards">
+            <div class="welove-card">
+                <div class="welove-icon">
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <h3 class="welove-title">Accès VIP Exclusif</h3>
+                <p class="welove-description">Accédez aux zones réservées, rencontres privilégiées avec les artistes et expériences backstage uniques.</p>
+            </div>
+            
+            <div class="welove-card">
+                <div class="welove-icon">
+                    <span class="material-symbols-outlined">celebration</span>
+                </div>
+                <h3 class="welove-title">Soirées Privées</h3>
+                <p class="welove-description">Participez à des événements fermés et des after-parties avec les têtes d'affiche du festival.</p>
+            </div>
+            
+            <div class="welove-card">
+                <div class="welove-icon">
+                    <span class="material-symbols-outlined">palette</span>
+                </div>
+                <h3 class="welove-title">Immersion Culturelle</h3>
+                <p class="welove-description">Découvrez la richesse artistique du Bénin à travers des ateliers et rencontres authentiques.</p>
+            </div>
+        </div>
+        
+        <div class="welove-stats">
+            <div class="stat">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Jours d'immersion</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50</div>
+                <div class="stat-label">Artistes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Expérience Unique</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <button class="cta-button">Découvrir WELOVE EYA</button>
+        </div>
+    </section>
+    
+    <!-- Témoignages Section -->
+    <section class="section testimonials-section" id="temoignages">
+        <div class="testimonial-content">
+            <div class="testimonial-text">
+                <h3>Témoignages & Preuves Sociales</h3>
+                <p>"SIMPL' a transformé mon voyage d'affaires en une véritable immersion culturelle. Chaque détail était parfaitement orchestré, des rencontres authentiques aux expériences exclusives. Inoubliable."</p>
+                <p class="testimonial-author">— Loan ADJOVI, Benin</p>
+                <a href="avis.html" class="text-link">
+                    Voir tous les témoignages
+                    <span class="material-symbols-outlined" style="font-size: 1.2rem;">arrow_forward</span>
+                </a>
+            </div>
+            <div class="testimonial-image">
+                <img src="/assets/img/Your opinion matters symbol survey or feedback sign concept illustration _ Premium Vector.jpg" alt="Témoignages clients">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="contact-content">
+            <div class="contact-image">
+                <img src="/assets/img/illustration of community teamwork employees.jpg" alt="Contactez-nous">
+            </div>
+            <div class="contact-text">
+                <h3>Contact Intelligent</h3>
+                <p>Prêt à dessiner votre aventure béninoise ? Notre équipe est à votre écoute pour créer l'expérience sur mesure qui correspond à vos attentes.</p>
+                <p>Contactez-nous via notre formulaire, par téléphone ou WhatsApp pour une réponse rapide et personnalisée.</p>
+                <a href="contact.html" class="text-link">
+                    Nous contacter
+                    <span class="material-symbols-outlined" style="font-size: 1.2rem;">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="/assets/img/Sans écriture.png" alt="Logo SIMPL'" style="height: 40px; border-radius: 10px;">
+                    <span class="logo-text">SIMPL'</span>
+                </div>
+                <p class="footer-description">L'Art de Simplifier l'Exceptionnel. Nous créons des expériences de voyage uniques et personnalisées au Bénin.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <span class="material-symbols-outlined">facebook</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-symbols-outlined">instagram</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-symbols-outlined">linkedin</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="services.html">Nos Services</a></li>
+                    <li><a href="histoire.html">Notre Histoire</a></li>
+                    <li><a href="welov.html">Evènements</a></li>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <span class="material-symbols-outlined icon">location_on</span>
+                        <span>Cotonou, Bénin</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined icon">call</span>
+                        <span>+229 0191464297</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined icon">mail</span>
+                        <span>simplagence@zohomail.com</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Légal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Mentions Légales</a></li>
+                    <li><a href="#">Politique de Confidentialité</a></li>
+                    <li><a href="#">Conditions Générales</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 SIMPL'. Tous droits réservés | Conciergerie d'excellence au Bénin.</p>
+        </div>
+    </footer>
+    
+    <script src="/assets/js/index.js" ></script>
+</body>
+</html>

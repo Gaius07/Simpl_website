@@ -1,0 +1,198 @@
+:root {
+            --gold-luxury: #D4AF37;
+            --gold-dark: #B8941F;
+            --gold-pale: #F4E4A6;
+            --blue-marine: #1E2A47;
+            --blue-light: #2A3D5F;
+            --blue-night: #0F1729;
+            --white-pearl: #F8F8F8;
+            --silver-gray: #E8E8E8;
+            --burgundy: #722F37;
+            --sapphire: #0F4C5C;
+            --cream: #F5F1E6;
+            --text-dark: #333333;
+        }
+        
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--white-pearl);
+            color: var(--text-dark);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+
+        /* Animations personnalisées */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulseGlow {
+            from { box-shadow: 0 0 5px rgba(212, 175, 55, 0.4); }
+            to { box-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+        }
+
+        @keyframes parallax {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes textShimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Styles pour les éléments animés */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-shimmer-effect {
+            background: linear-gradient(90deg, var(--gold-luxury), var(--white-pearl), var(--gold-luxury));
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShimmer 3s ease-in-out infinite;
+        }
+
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(45deg, var(--gold-luxury), var(--white-pearl), var(--blue-marine), var(--gold-luxury));
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            padding: 2px;
+            border-radius: 0.75rem;
+        }
+
+        .gradient-border > div {
+            background: var(--white-pearl);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Effet de particules pour l'arrière-plan */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        /* Bouton Accueil simplifié */
+        .home-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--gold-luxury);
+            color: var(--blue-marine);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .home-button:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Classes utilitaires pour les couleurs */
+        .bg-gold-luxury { background-color: var(--gold-luxury); }
+        .bg-gold-dark { background-color: var(--gold-dark); }
+        .bg-gold-pale { background-color: var(--gold-pale); }
+        .bg-blue-marine { background-color: var(--blue-marine); }
+        .bg-blue-light { background-color: var(--blue-light); }
+        .bg-white-pearl { background-color: var(--white-pearl); }
+        .bg-silver-gray { background-color: var(--silver-gray); }
+        .bg-burgundy { background-color: var(--burgundy); }
+        .bg-sapphire { background-color: var(--sapphire); }
+        .bg-cream { background-color: var(--cream); }
+        
+        .text-gold-luxury { color: var(--gold-luxury); }
+        .text-gold-dark { color: var(--gold-dark); }
+        .text-gold-pale { color: var(--gold-pale); }
+        .text-blue-marine { color: var(--blue-marine); }
+        .text-blue-light { color: var(--blue-light); }
+        .text-white-pearl { color: var(--white-pearl); }
+        .text-burgundy { color: var(--burgundy); }
+        .text-sapphire { color: var(--sapphire); }
+        
+        .border-gold-luxury { border-color: var(--gold-luxury); }
+        .border-blue-marine { border-color: var(--blue-marine); }
+        .border-silver-gray { border-color: var(--silver-gray); }

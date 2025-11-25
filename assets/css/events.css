@@ -1,0 +1,429 @@
+:root {
+            --gold-luxury: #D4AF37;
+            --gold-dark: #B8941F;
+            --gold-pale: #F4E4A6;
+            --blue-marine: #1E2A47;
+            --blue-light: #2A3D5F;
+            --blue-night: #0F1729;
+            --white-pearl: #F8F8F8;
+            --silver-gray: #E8E8E8;
+            --burgundy: #722F37;
+            --sapphire: #0F4C5C;
+            --cream: #F5F1E6;
+            --text-dark: #333333;
+        }
+        
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: var(--white-pearl);
+            color: var(--text-dark);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(30, 42, 71, 0.85) 0%, rgba(42, 61, 95, 0.9) 100%);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.3) 50%, transparent 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .price-card {
+            transition: all 0.3s ease;
+        }
+        
+        .price-card.featured {
+            border: 2px solid var(--gold-luxury);
+            position: relative;
+        }
+        
+        .price-card.featured::before {
+            content: "Recommandé";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold-luxury);
+            color: var(--blue-marine);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .accordion-item {
+            border-bottom: 1px solid var(--silver-gray);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        
+        .accordion-item.active .material-icons.rotate-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            background: rgba(30, 42, 71, 0.9);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            transform: translateY(-100%);
+            animation: navbarSlideDown 0.8s ease forwards 0.2s;
+        }
+        
+        @keyframes navbarSlideDown {
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        .navbar.scrolled {
+            background: rgba(248, 248, 248, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--silver-gray);
+        }
+        
+        .navbar.scrolled a {
+            color: var(--blue-marine);
+        }
+        
+        .navbar.scrolled .logo-text {
+            color: var(--blue-marine);
+        }
+        
+        .navbar.scrolled .nav-cta {
+            background: var(--gold-luxury);
+            color: var(--blue-marine);
+            border: 1px solid var(--gold-luxury);
+        }
+        
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo img {
+            height: 50px;
+            border-radius: 15px;
+            display: block;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white-pearl);
+            letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--white-pearl);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold-luxury);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-luxury);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: transparent;
+            border: 1px solid var(--white-pearl);
+            color: var(--white-pearl);
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .nav-cta:hover {
+            background: var(--white-pearl);
+            color: var(--blue-marine);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Bouton principal */
+        .cta-button {
+            background: var(--gold-luxury);
+            color: var(--blue-marine);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            background: var(--gold-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: var(--white-pearl);
+            z-index: 1002;
+            transition: right 0.3s ease;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--blue-marine);
+        }
+        
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .mobile-nav-links a {
+            color: var(--blue-marine);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--silver-gray);
+        }
+        
+        .mobile-cta {
+            background-color: var(--gold-luxury);
+            color: var(--blue-marine);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 1rem;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white-pearl);
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .navbar {
+                padding: 1rem 1.5rem;
+            }
+            
+            .navbar.scrolled .mobile-menu-btn {
+                color: var(--blue-marine);
+            }
+        }
+        
+        /* Section Immersion Culturelle */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .experience-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 400px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--silver-gray);
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .experience-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .experience-card:hover .experience-image {
+            transform: scale(1.05);
+        }
+        
+        .experience-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(30, 42, 71, 0.9));
+            padding: 2rem;
+            color: var(--white-pearl);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-card:hover .experience-overlay {
+            transform: translateY(0);
+        }
+        
+        .experience-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(212, 175, 55, 0.9);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Classes utilitaires pour les couleurs */
+        .bg-gold-luxury { background-color: var(--gold-luxury); }
+        .bg-gold-dark { background-color: var(--gold-dark); }
+        .bg-gold-pale { background-color: var(--gold-pale); }
+        .bg-blue-marine { background-color: var(--blue-marine); }
+        .bg-blue-light { background-color: var(--blue-light); }
+        .bg-white-pearl { background-color: var(--white-pearl); }
+        .bg-silver-gray { background-color: var(--silver-gray); }
+        .bg-burgundy { background-color: var(--burgundy); }
+        .bg-sapphire { background-color: var(--sapphire); }
+        .bg-cream { background-color: var(--cream); }
+        
+        .text-gold-luxury { color: var(--gold-luxury); }
+        .text-gold-dark { color: var(--gold-dark); }
+        .text-gold-pale { color: var(--gold-pale); }
+        .text-blue-marine { color: var(--blue-marine); }
+        .text-blue-light { color: var(--blue-light); }
+        .text-white-pearl { color: var(--white-pearl); }
+        .text-burgundy { color: var(--burgundy); }
+        .text-sapphire { color: var(--sapphire); }
+        
+        .border-gold-luxury { border-color: var(--gold-luxury); }
+        .border-blue-marine { border-color: var(--blue-marine); }
+        .border-silver-gray { border-color: var(--silver-gray); }
